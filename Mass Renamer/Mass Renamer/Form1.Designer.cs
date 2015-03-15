@@ -34,6 +34,10 @@
             this.buttonAdd = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.buttonRename = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxStarting = new System.Windows.Forms.TextBox();
+            this.textBoxEnding = new System.Windows.Forms.TextBox();
+            this.textBoxSignificand = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // listBox1
@@ -47,14 +51,16 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(209, 95);
+            this.textBox1.Location = new System.Drawing.Point(349, 84);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(163, 20);
             this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // listBox2
             // 
             this.listBox2.FormattingEnabled = true;
+            this.listBox2.HorizontalScrollbar = true;
             this.listBox2.Location = new System.Drawing.Point(349, 121);
             this.listBox2.Name = "listBox2";
             this.listBox2.Size = new System.Drawing.Size(163, 225);
@@ -76,23 +82,63 @@
             // 
             // buttonRename
             // 
-            this.buttonRename.Location = new System.Drawing.Point(209, 352);
+            this.buttonRename.Location = new System.Drawing.Point(208, 380);
             this.buttonRename.Name = "buttonRename";
             this.buttonRename.Size = new System.Drawing.Size(163, 47);
             this.buttonRename.TabIndex = 4;
             this.buttonRename.Text = "Rename";
             this.buttonRename.UseVisualStyleBackColor = true;
+            this.buttonRename.Click += new System.EventHandler(this.buttonRename_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(294, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(278, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Please enter starting value, ending value and significands";
+            // 
+            // textBoxStarting
+            // 
+            this.textBoxStarting.Location = new System.Drawing.Point(349, 34);
+            this.textBoxStarting.Name = "textBoxStarting";
+            this.textBoxStarting.Size = new System.Drawing.Size(48, 20);
+            this.textBoxStarting.TabIndex = 6;
+            this.textBoxStarting.TextChanged += new System.EventHandler(this.textBoxStarting_TextChanged);
+            // 
+            // textBoxEnding
+            // 
+            this.textBoxEnding.Location = new System.Drawing.Point(403, 34);
+            this.textBoxEnding.Name = "textBoxEnding";
+            this.textBoxEnding.Size = new System.Drawing.Size(50, 20);
+            this.textBoxEnding.TabIndex = 7;
+            this.textBoxEnding.TextChanged += new System.EventHandler(this.textBoxEnding_TextChanged);
+            // 
+            // textBoxSignificand
+            // 
+            this.textBoxSignificand.Location = new System.Drawing.Point(487, 34);
+            this.textBoxSignificand.Name = "textBoxSignificand";
+            this.textBoxSignificand.Size = new System.Drawing.Size(25, 20);
+            this.textBoxSignificand.TabIndex = 8;
+            this.textBoxSignificand.TextChanged += new System.EventHandler(this.textBoxSignificand_TextChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 411);
+            this.ClientSize = new System.Drawing.Size(584, 461);
+            this.Controls.Add(this.textBoxSignificand);
+            this.Controls.Add(this.textBoxEnding);
+            this.Controls.Add(this.textBoxStarting);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonRename);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.listBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -108,6 +154,10 @@
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Button buttonRename;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxStarting;
+        private System.Windows.Forms.TextBox textBoxEnding;
+        private System.Windows.Forms.TextBox textBoxSignificand;
     }
 }
 
